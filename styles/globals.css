@@ -1,14 +1,13 @@
 html,
-
 :root {
-  --primary-background-color: #F3F9FC;
-  --pattern-color: #ffffff;
-  --header-color: #B1D0CF;
-  --button-active-color: #FBB80F;
-  --primary-font-color: #309FAB;
-  --table-color: #FBB80F80;
-  --button-border-color: #519DA9;
-  --input-border-color: #B7CFCF;
+  --primary-background-color: #f3f9fc;
+  --pattern-color: #fff;
+  --header-color: #b1d0cf;
+  --button-active-color: #fbb80f;
+  --primary-font-color: #309fab;
+  --table-color: #fbb80f80;
+  --button-border-color: #519da9;
+  --input-border-color: #b7cfcf;
 }
 
 body {
