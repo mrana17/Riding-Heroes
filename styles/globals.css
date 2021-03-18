@@ -1,4 +1,15 @@
 html,
+:root {
+  --primary-background-color: #f3f9fc;
+  --pattern-color: #fff;
+  --header-color: #b1d0cf;
+  --button-active-color: #fbb80f;
+  --primary-font-color: #309fab;
+  --table-color: #fbb80f80;
+  --button-border-color: #519da9;
+  --input-border-color: #b7cfcf;
+}
+
 body {
   padding: 0;
   margin: 0;
