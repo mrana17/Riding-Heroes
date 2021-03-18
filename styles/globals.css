@@ -1,4 +1,16 @@
 html,
+
+:root {
+  --primary-background-color: #F3F9FC;
+  --pattern-color: #ffffff;
+  --header-color: #B1D0CF;
+  --button-active-color: #FBB80F;
+  --primary-font-color: #309FAB;
+  --table-color: #FBB80F80;
+  --button-border-color: #519DA9;
+  --input-border-color: #B7CFCF;
+}
+
 body {
   padding: 0;
   margin: 0;
