@@ -17,6 +17,6 @@ Username.args = {
 
 export const Password = Template.bind({});
 Password.args = {
-  placeholder: "Password",
+  placeholder: "Passwort",
   type: "password",
 };
