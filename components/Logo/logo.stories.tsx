@@ -14,8 +14,8 @@ TextLogo.args = {
   src: "/text-logo.svg",
 };
 
-export const FahrerLogo = Template.bind({});
-FahrerLogo.args = {
+export const DriverLogo = Template.bind({});
+DriverLogo.args = {
   src: "/fahrer-logo.svg",
 };
 
