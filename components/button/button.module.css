@@ -1,8 +1,8 @@
 .btn {
-  border-radius: 10px;
-}
-
-.primary {
-  color: antiquewhite;
-  background: black;
+  border-radius: 2rem;
+  border: 5px solid #519da9;
+  width: 8.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  color: #309fab;
 }

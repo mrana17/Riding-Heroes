@@ -1,6 +1,6 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
-import Button, { ButtonProps } from "./button";
+import Button, { ButtonProps } from "./loginButton";
 
 export default {
   title: "Common/Button",
@@ -9,13 +9,7 @@ export default {
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: "Button",
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const LoginButton = Template.bind({});
+LoginButton.args = {
   label: "Button",
 };
