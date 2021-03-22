@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Button from "../components/button/button";
+import Button from "../components/button/loginButton";
 
 export default function Home() {
   return (
@@ -11,8 +11,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Button primary label="Primary" />
-        <Button primary={false} label="Secondary" />
+        <Button label="Login" onClick={() => Home()} />
       </main>
     </div>
   );
