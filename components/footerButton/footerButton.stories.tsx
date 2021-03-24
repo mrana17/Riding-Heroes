@@ -24,7 +24,7 @@ MapButton.args = {
 export const ProfileButton = Template.bind({});
 ProfileButton.args = {
   label: "Profile",
-  imgSrc: "Profile-picture.svg",
+  imgSrc: "/Profile-picture.svg",
   href: "#",
 };
 export const WalletButton = Template.bind({});
