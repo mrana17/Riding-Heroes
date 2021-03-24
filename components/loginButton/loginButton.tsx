@@ -8,11 +8,7 @@ export type ButtonProps = {
 
 function LoginButton({ label, onClick, ...props }: ButtonProps) {
   return (
-    <button
-      className={`${styles.btn} ${styles.loginButton}`}
-      onClick={onClick}
-      {...props}
-    >
+    <button className={styles.loginButton} onClick={onClick} {...props}>
       {label}
     </button>
   );
