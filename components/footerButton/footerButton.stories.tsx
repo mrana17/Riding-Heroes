@@ -30,6 +30,6 @@ ProfileButton.args = {
 export const WalletButton = Template.bind({});
 WalletButton.args = {
   label: "Wallet",
-  imgSrc: "wallet.svg",
+  imgSrc: "/wallet.svg",
   href: "#",
 };
