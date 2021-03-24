@@ -18,7 +18,7 @@ HistoryButton.args = {
 export const MapButton = Template.bind({});
 MapButton.args = {
   label: "Map",
-  imgSrc: "route-map.svg",
+  imgSrc: "/route-map.svg",
   href: "#",
 };
 export const ProfileButton = Template.bind({});
