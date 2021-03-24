@@ -1,0 +1,6 @@
+.header {
+  height: 20vh;
+  width: 100vw;
+  background: var(--header-BG-color);
+  border-radius: 0 0 1.5rem 1.5rem;
+}
