@@ -1,0 +1,26 @@
+.footerButton {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
+  border: none;
+  border-radius: 0.3rem;
+  color: #519da9;
+  background: var(--button-active-color);
+  width: 5.5rem;
+  height: 2.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footerImg {
+  height: 2rem;
+  width: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footerBtnText {
+  font-size: 0.8rem;
+  margin: 0;
+  padding-right: 0.3rem;
+}
