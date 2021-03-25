@@ -1,0 +1,19 @@
+### POST n new order
+POST http://localhost:3000/api/hello
+Content-Type: application/json
+
+    {
+      "id": 1,
+      "name": "Melanie",
+      "Surname": "Wiemers",
+      "address": {
+        "street": "Ballindamm",
+        "number": 1,
+        "plz": 20099,
+        "city": "Hamburg"
+      },
+      "order": "Aglio e Olio"
+    }
+
+### GET all orders
+GET http://localhost:3000/api/hello/
