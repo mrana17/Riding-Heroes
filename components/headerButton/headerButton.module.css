@@ -6,8 +6,6 @@
   background: var(--pattern-color);
   width: 2.25rem;
   height: 2.25rem;
-  -webkit-box-shadow: 0 0.2rem 0.4rem 0 #00000029;
-  -moz-box-shadow: 0 0.2rem 0.4rem 0 #00000029;
   box-shadow: 0 0.2rem 0.4rem 0 #00000029;
 }
 
