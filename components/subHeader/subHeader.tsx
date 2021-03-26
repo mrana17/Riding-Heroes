@@ -4,9 +4,9 @@ export type SubHeaderProps = {
   infoOne: string;
   infoOneNumber: number;
   infoTwo: string;
-  infoTwoNumber: string;
+  infoTwoNumber: [number, string];
   infoThree: string;
-  infoThreeNumber: string;
+  infoThreeNumber: [number, string];
 };
 
 function SubHeader({
