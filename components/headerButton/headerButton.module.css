@@ -1,0 +1,15 @@
+.headerButton {
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 0.6rem;
+  background: var(--pattern-color);
+  width: 2.25rem;
+  height: 2.25rem;
+  box-shadow: 0 0.2rem 0.4rem 0 #00000029;
+}
+
+.headerImg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
