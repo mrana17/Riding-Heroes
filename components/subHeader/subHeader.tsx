@@ -2,7 +2,7 @@ import styles from "./subHeader.module.css";
 
 export type SubHeaderProps = {
   infoOne: string;
-  infoOneNumber: string;
+  infoOneNumber: number;
   infoTwo: string;
   infoTwoNumber: string;
   infoThree: string;
