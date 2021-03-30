@@ -15,6 +15,14 @@
 # production
 /build
 /storybook-static
+/server/samples.http
+/samples.http
+server/samples.http
+samples.http
+/server/db.json
+server/db.json
+/db.json
+db.json
 
 # misc
 .DS_Store
@@ -31,6 +39,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.env
 
 # vercel
 .vercel
