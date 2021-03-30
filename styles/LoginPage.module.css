@@ -1,0 +1,23 @@
+.container {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-background-color);
+  background-image: url("/Welcome-Pattern.svg");
+  background-size: contain;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.inputFields {
+  display: grid;
+  justify-content: center;
+  gap: 0.5rem;
+}

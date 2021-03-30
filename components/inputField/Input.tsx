@@ -5,14 +5,14 @@ export type InputProps = {
   type: string;
 };
 
-function UsernameInput({ placeholder, ...props }: InputProps) {
+function Input({ placeholder, ...props }: InputProps) {
   return (
     <input
-      className={`${styles.input} ${styles.usernameInput}`}
+      className={`${styles.input}`}
       placeholder={`${placeholder}`}
       {...props}
     ></input>
   );
 }
 
-export default UsernameInput;
+export default Input;
