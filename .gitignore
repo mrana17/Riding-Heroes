@@ -19,6 +19,10 @@
 /samples.http
 server/samples.http
 samples.http
+/server/db.json
+server/db.json
+/db.json
+db.json
 
 # misc
 .DS_Store
