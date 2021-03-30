@@ -17,7 +17,7 @@ export type OrderDoc = {
 let client = null;
 let db = null;
 
-const url = process.env.MONGODB_URL;
+const url = process.env.MONGODB_URI;
 
 type Handler = (req: NextApiRequest, res: NextApiResponse) => void;
 export const withDatabase = (handler: Handler) => async (

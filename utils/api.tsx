@@ -15,10 +15,10 @@ async function fetchURL<T>(url: string): Promise<T> {
   return await response.json();
 }
 
-export async function getStocks(): Promise<Order[]> {
+export async function getOrders(): Promise<Order[]> {
   return await fetchURL<Order[]>("/api/orders");
 }
 
-export async function getStock(id: string): Promise<Order> {
+export async function getOrder(id: string): Promise<Order> {
   return await fetchURL<Order>(`/api/orders/${id}`);
 }

@@ -15,6 +15,10 @@
 # production
 /build
 /storybook-static
+/server/samples.http
+/samples.http
+server/samples.http
+samples.http
 
 # misc
 .DS_Store
