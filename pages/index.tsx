@@ -1,17 +1,28 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Button from "../components/loginButton/loginButton";
+import Link from "next/link";
+import Logo from "../components/Logo/logo";
+import styles from "../styles/WelcomePage.module.css";
 
-export default function Home() {
+export default function WelcomePage() {
+  function myFunction() {
+    {
+      setTimeout(() => {
+        location.href = "/LoginPage";
+      }, 3000);
+    }
+  }
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Riding-Heroes</title>
+        <link rel="icon" href="/full-Logo.svg" />
       </Head>
 
       <main className={styles.main}>
-        <Button label="Login" onClick={() => Home()} />
+        <Link href="/LoginPage">
+          <Logo src="/full-Logo.svg" />
+        </Link>
       </main>
     </div>
   );
