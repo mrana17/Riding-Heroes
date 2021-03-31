@@ -1,16 +1,13 @@
+import router from "next/router";
 import Head from "next/head";
-import Link from "next/link";
+import { useEffect } from "react";
 import Logo from "../components/Logo/logo";
 import styles from "../styles/WelcomePage.module.css";
 
 export default function WelcomePage() {
-  function myFunction() {
-    {
-      setTimeout(() => {
-        location.href = "/LoginPage";
-      }, 3000);
-    }
-  }
+  useEffect(() => {
+    setTimeout(() => router.push("/LoginPage"), 3000);
+  });
 
   return (
     <div className={styles.container}>
@@ -20,9 +17,7 @@ export default function WelcomePage() {
       </Head>
 
       <main className={styles.main}>
-        <Link href="/LoginPage">
-          <Logo src="/full-Logo.svg" />
-        </Link>
+        <Logo src="/full-Logo.svg" />
       </main>
     </div>
   );
