@@ -18,7 +18,10 @@ export default function LoginPage() {
           <Input type="text" placeholder="Benutzername" />
           <Input type="password" placeholder="Passwort" />
         </div>
-        <Button label="Login" onClick={() => LoginPage()} />
+        <Button
+          label="Login"
+          onClick={() => alert("next page is coming soon")}
+        />
       </main>
     </div>
   );
