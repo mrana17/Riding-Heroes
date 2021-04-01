@@ -1,0 +1,15 @@
+.container {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-background-color);
+  background-image: url("/Welcome-Pattern.svg");
+  background-size: contain;
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}

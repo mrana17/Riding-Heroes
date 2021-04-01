@@ -1,17 +1,23 @@
+import router from "next/router";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Button from "../components/loginButton/loginButton";
+import { useEffect } from "react";
+import Logo from "../components/Logo/logo";
+import styles from "../styles/WelcomePage.module.css";
 
-export default function Home() {
+export default function WelcomePage() {
+  useEffect(() => {
+    setTimeout(() => router.push("/LoginPage"), 3000);
+  });
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Riding-Heroes</title>
+        <link rel="icon" href="/full-Logo.svg" />
       </Head>
 
       <main className={styles.main}>
-        <Button label="Login" onClick={() => Home()} />
+        <Logo src="/full-Logo.svg" />
       </main>
     </div>
   );
