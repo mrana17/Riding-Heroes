@@ -3,7 +3,7 @@ POST http://localhost:3000/api/orders
 Content-Type: application/json
 
     {
-      "id": 1,
+      "id": 2,
       "name": "Horst",
       "Surname": "Frank",
       "address": {
@@ -12,7 +12,8 @@ Content-Type: application/json
         "plz": 20099,
         "city": "Hamburg"
       },
-      "order": "Spaghetti Bolognese"
+      "order": "Spaghetti Bolognese",
+      "sale": "16,70€"
     }
 
 ### GET all orders
