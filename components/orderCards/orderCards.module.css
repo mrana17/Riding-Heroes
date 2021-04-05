@@ -1,0 +1,55 @@
+.orderCard {
+  display: grid;
+  width: 90vw;
+  height: 25vh;
+  background-color: var(--component-BG-color);
+  border-radius: 1.5rem;
+  color: var(--primary-font-color);
+  box-shadow: 0 0.2rem 0.4rem 0 #00000029;
+}
+
+.orderCardContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  padding: 0.5rem;
+  grid-template-areas:
+    "image name"
+    "image startAddress"
+    "image address";
+  align-items: center;
+}
+
+.orderCardImg {
+  grid-area: image;
+}
+
+.orderCardName {
+  grid-area: name;
+  margin: 0;
+  place-self: center;
+}
+
+.orderCardStartAddress {
+  display: flex;
+  grid-area: startAddress;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.orderCardAddress {
+  display: flex;
+  grid-area: address;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.orderCardStart {
+  padding: 0.1rem;
+}
+
+.orderCardEnd {
+  padding: 0.1rem;
+}
