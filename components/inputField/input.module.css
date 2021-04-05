@@ -4,7 +4,7 @@
   width: 16.25rem;
   height: 2.5rem;
   background-color: #fff;
-  color: #b1d0cf;
+  color: var(--component-BG-color);
   text-align: center;
 }
 
