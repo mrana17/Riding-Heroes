@@ -4,9 +4,9 @@ export type TableProps = {
   idTitle: string;
   addressTitle: string;
   saleTitle: string;
-  id: string;
+  id: number;
   address: string;
-  sale: string;
+  sale: number;
 };
 
 function Table({

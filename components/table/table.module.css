@@ -1,5 +1,5 @@
 .table {
   background-color: var(--table-color);
   color: var(--primary-font-color);
-  box-shadow: 0 0.2rem 0.4rem 0 #00000029;
+  box-shadow: var(--component-shadow);
 }
