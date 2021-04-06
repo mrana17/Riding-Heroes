@@ -8,6 +8,7 @@ html,
   --button-border-color: #519da9;
   --input-border-color: #b7cfcf;
   --component-BG-color: #b1d0cf;
+  --component-shadow: 0 0.2rem 0.4rem 0 #00000029;
 }
 
 body {

@@ -1,0 +1,5 @@
+.table {
+  background-color: var(--table-color);
+  color: var(--primary-font-color);
+  box-shadow: var(--component-shadow);
+}
