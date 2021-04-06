@@ -1,0 +1,26 @@
+.headerButton {
+  display: grid;
+  border: none;
+  place-items: center;
+  border-radius: 1rem;
+  background: var(--pattern-color);
+  width: 3.75rem;
+  height: 5rem;
+  box-shadow: var(--component-shadow);
+  padding: 0.5rem;
+}
+
+.headerImg {
+  width: 2rem;
+}
+
+.container {
+  box-shadow: var(--component-shadow);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+}
+
+button:active {
+  background-color: var(--button-active-color);
+}
