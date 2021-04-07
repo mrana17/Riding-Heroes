@@ -3,6 +3,7 @@ import styles from "../styles/LoginPage.module.css";
 import Button from "../components/loginButton/loginButton";
 import Input from "../components/inputField/Input";
 import Logo from "../components/Logo/logo";
+import router from "next/router";
 
 export default function LoginPage() {
   return (
@@ -18,10 +19,7 @@ export default function LoginPage() {
           <Input type="text" placeholder="Benutzername" />
           <Input type="password" placeholder="Passwort" />
         </div>
-        <Button
-          label="Login"
-          onClick={() => alert("next page is coming soon")}
-        />
+        <Button label="Login" onClick={() => router.push("/ProfilePage")} />
       </main>
     </div>
   );
