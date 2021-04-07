@@ -33,7 +33,7 @@ export default function LoginPage() {
           />
           <HeaderButton
             className={styles.moreButton}
-            imgSrc="/More.svg"
+            imgSrc="/more.svg"
             onClick={() => alert("more functions will follow")}
           />
         </div>
