@@ -1,6 +1,7 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 import SubHeader, { SubHeaderProps } from "./subHeader";
+import styles from "./subHeader.module.css";
 
 export default {
   title: "Common/SubHeader",
@@ -18,4 +19,5 @@ ProfilePageHeader.args = {
   infoTwoNumber: "123,45€",
   infoThree: "Trinkgeld",
   infoThreeNumber: "16,78€",
+  className: styles.subHeader,
 };

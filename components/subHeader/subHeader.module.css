@@ -8,4 +8,6 @@
   background: var(--primary-background-color);
   border-radius: 1.5rem;
   color: var(--primary-font-color);
+  box-shadow: var(--component-shadow);
+  padding: 0.5rem;
 }
