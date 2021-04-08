@@ -1,7 +1,6 @@
 import HeaderButton from "../components/headerButton/headerButton";
 import SubHeader from "../components/subHeader/subHeader";
 import styles from "../styles/HistoryPage.module.css";
-import "react-calendar/dist/Calendar.css";
 import FooterButton from "../components/footerButton/footerButton";
 import OrderCard from "../components/orderCards/orderCards";
 
@@ -84,12 +83,3 @@ export default function HistoryPage() {
     </main>
   );
 }
-
-//       <div className={styles.cardContainer}>
-//         <OrderCard
-
-//         />
-//       </div>
-//     </main>
-//   );
-// }
