@@ -1,4 +1,3 @@
-import Head from "next/head";
 import styles from "../styles/LoginPage.module.css";
 import Button from "../components/loginButton/loginButton";
 import Input from "../components/inputField/Input";
@@ -8,11 +7,6 @@ import router from "next/router";
 export default function LoginPage() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Login Page</title>
-        <link rel="icon" href="/full-Logo.svg" />
-      </Head>
-
       <main className={styles.main}>
         <Logo src="/full-Logo.svg" />
         <div className={styles.inputFields}>

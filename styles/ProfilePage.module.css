@@ -82,9 +82,10 @@
 }
 
 .calendar {
+  width: 100vw;
   display: grid;
   grid-row-start: 18;
-  grid-column-start: 2;
+  place-items: center;
 }
 
 .footer {
