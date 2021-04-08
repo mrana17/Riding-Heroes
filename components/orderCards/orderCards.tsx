@@ -7,7 +7,7 @@ export type OrderCardProps = {
   name: string;
   surname: string;
   startAddress: string;
-  address: [string, number];
+  address: string;
 };
 
 function OrderCard({
@@ -21,7 +21,7 @@ function OrderCard({
   ...props
 }: OrderCardProps) {
   return (
-    <article className={styles.orderCard} {...props}>
+    <div className={styles.orderCard} {...props}>
       <div className={styles.orderCardContainer}>
         <img src={imgSrc} className={styles.orderCardImg} />
         <p className={styles.orderCardName}>
@@ -36,7 +36,7 @@ function OrderCard({
           {address}
         </p>
       </div>
-    </article>
+    </div>
   );
 }
 

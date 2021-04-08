@@ -1,12 +1,10 @@
-import ChooseRideButton from "../components/chooseRideButton/chooseRideButton";
 import HeaderButton from "../components/headerButton/headerButton";
 import SubHeader from "../components/subHeader/subHeader";
-import styles from "../styles/ProfilePage.module.css";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
+import styles from "../styles/HistoryPage.module.css";
 import FooterButton from "../components/footerButton/footerButton";
+import OrderCard from "../components/orderCards/orderCards";
 
-export default function ProfilePage() {
+export default function HistoryPage() {
   return (
     <main className={styles.main}>
       <div className={styles.header}>
@@ -30,34 +28,43 @@ export default function ProfilePage() {
           onClick={() => alert("more functions will follow")}
         />
       </div>
-      <div className={styles.chooseRideContainer}>
-        <ChooseRideButton
-          imgSrc="/bike.svg"
-          label="Fahrrad"
-          onClick={() => alert("You are riding a bike")}
-          className={styles.chooseRideButton}
+      <div className={styles.cardContainer}>
+        <OrderCard
+          imgSrc="/Card-Placeholder.png"
+          imgSrcStart="/Start.svg"
+          imgSrcEnd="/Target.svg"
+          name="Max"
+          surname="Mustermann"
+          startAddress="Mönckebergstrasse 7, 20099 Hamburg"
+          address="Ballindamm 9, 20099 Hamburg"
         />
-        <ChooseRideButton
-          imgSrc="/car.svg"
-          label="Auto"
-          onClick={() => alert("You are riding a car")}
-          className={styles.chooseRideButton}
+        <OrderCard
+          imgSrc="/Card-Placeholder.png"
+          imgSrcStart="/Start.svg"
+          imgSrcEnd="/Target.svg"
+          name="Max"
+          surname="Mustermann"
+          startAddress="Mönckebergstrasse 7, 20099 Hamburg"
+          address="Ballindamm 9, 20099 Hamburg"
         />
-        <ChooseRideButton
-          imgSrc="/scooter.svg"
-          label="Scooter"
-          onClick={() => alert("You are riding a scooter")}
-          className={styles.chooseRideButton}
+        <OrderCard
+          imgSrc="/Card-Placeholder.png"
+          imgSrcStart="/Start.svg"
+          imgSrcEnd="/Target.svg"
+          name="Max"
+          surname="Mustermann"
+          startAddress="Mönckebergstrasse 7, 20099 Hamburg"
+          address="Ballindamm 9, 20099 Hamburg"
         />
-        <ChooseRideButton
-          imgSrc="/Roller.svg"
-          label="Roller"
-          onClick={() => alert("You are riding a roller")}
-          className={styles.chooseRideButton}
+        <OrderCard
+          imgSrc="/Card-Placeholder.png"
+          imgSrcStart="/Start.svg"
+          imgSrcEnd="/Target.svg"
+          name="Max"
+          surname="Mustermann"
+          startAddress="Mönckebergstrasse 7, 20099 Hamburg"
+          address="Ballindamm 9, 20099 Hamburg"
         />
-      </div>
-      <div className={styles.calendar}>
-        <Calendar />
       </div>
       <div className={styles.footer}>
         <FooterButton
