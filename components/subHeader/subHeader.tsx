@@ -1,5 +1,3 @@
-import styles from "./subHeader.module.css";
-
 export type SubHeaderProps = {
   infoOne: string;
   infoOneNumber: number;
@@ -7,6 +5,7 @@ export type SubHeaderProps = {
   infoTwoNumber: [number, string];
   infoThree: string;
   infoThreeNumber: [number, string];
+  className: string;
 };
 
 function SubHeader({
@@ -16,10 +15,11 @@ function SubHeader({
   infoTwoNumber,
   infoThree,
   infoThreeNumber,
+  className,
   ...props
 }: SubHeaderProps) {
   return (
-    <section className={`${styles.subHeader}`} {...props}>
+    <section className={className} {...props}>
       <div>
         {infoOne}
         <p>{infoOneNumber}</p>

@@ -5,18 +5,20 @@ export type ChooseRideButtonProps = {
   onClick: MouseEventHandler<HTMLButtonElement>;
   imgSrc: string;
   label: string;
+  className: string;
 };
 
 function ChooseRideButton({
   onClick,
   imgSrc,
   label,
+  className,
   ...props
 }: ChooseRideButtonProps) {
   return (
-    <button className={styles.headerButton} onClick={onClick} {...props}>
-      <div className={styles.container}>
-        <img src={imgSrc} className={styles.headerImg} />
+    <button className={className} onClick={onClick} {...props}>
+      <div className={styles.chooseRideContainer}>
+        <img src={imgSrc} className={styles.chooseRideImg} />
       </div>
       <p>{label}</p>
     </button>

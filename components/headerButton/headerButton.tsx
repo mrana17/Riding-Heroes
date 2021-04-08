@@ -1,20 +1,22 @@
 import { MouseEventHandler } from "react";
 import styles from "./headerButton.module.css";
-import Link from "next/link";
 
 export type HeaderButtonProps = {
   onClick: MouseEventHandler<HTMLButtonElement>;
   imgSrc: string;
-  href: string;
+  className: string;
 };
 
-function HeaderButton({ onClick, imgSrc, href, ...props }: HeaderButtonProps) {
+function HeaderButton({
+  onClick,
+  className,
+  imgSrc,
+  ...props
+}: HeaderButtonProps) {
   return (
-    <Link href={href}>
-      <button className={styles.headerButton} onClick={onClick} {...props}>
-        <img src={imgSrc} className={styles.headerImg} />
-      </button>
-    </Link>
+    <button className={className} onClick={onClick} {...props}>
+      <img src={imgSrc} className={styles.headerImg} />
+    </button>
   );
 }
 
