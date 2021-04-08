@@ -6,7 +6,7 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import FooterButton from "../components/footerButton/footerButton";
 
-export default function LoginPage() {
+export default function ProfilePage() {
   return (
     <main className={styles.main}>
       <div className={styles.header}>
