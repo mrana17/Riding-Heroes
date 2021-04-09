@@ -44,14 +44,27 @@ export async function orderList(collectionName) {
   return await db.collection(collectionName).find().toArray();
 }
 
+export async function usersList(collectionName) {
+  return await db.collection(collectionName).find().toArray();
+}
+
 export async function createOrderDoc(orderDoc: OrderDoc) {
   const orderCollection = await getCollection("Orders");
+  return await orderCollection.insertOne(orderDoc);
+}
+
+export async function createUserDoc(orderDoc: OrderDoc) {
+  const orderCollection = await getCollection("Users");
   return await orderCollection.insertOne(orderDoc);
 }
 
 export async function readOrderDoc(surname) {
   const orderCollection = await getCollection("Orders");
   return await orderCollection.findOne({ name: surname });
+}
+export async function readUserDoc(username) {
+  const orderCollection = await getCollection("Orders");
+  return await orderCollection.findOne({ name: username });
 }
 
 export function closeDB() {
