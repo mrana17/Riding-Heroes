@@ -16,5 +16,17 @@ Content-Type: application/json
       "sale": "16,70€"
     }
 
+### POST n new user
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+    {
+      "username": "testUser",
+      "password": "test123"
+    }
+
 ### GET all orders
 GET http://localhost:3000/api/orders
+
+### GET all users
+GET http://localhost:3000/api/users
