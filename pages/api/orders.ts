@@ -11,8 +11,12 @@ export default withDatabase(
     }
 
     if (req.method === "POST") {
-      createOrderDoc(req.body).then(() => {
-        res.status(200).json(req.body);
+      const order = {
+        ...req.body,
+        orderTime: new Date(),
+      };
+      await createOrderDoc(order).then(() => {
+        res.status(200).json(order);
       });
       res.status;
     }

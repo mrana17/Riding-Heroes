@@ -3,11 +3,17 @@
   border: none;
   place-items: center;
   border-radius: 1rem;
-  background: var(--pattern-color);
+  background-color: var(--pattern-color);
   width: 3.75rem;
   height: 5rem;
   box-shadow: var(--component-shadow);
   padding: 0.5rem;
+  color: var(--primary-font-color);
+  outline: none;
+}
+
+.chooseRideButtonActive {
+  background-color: var(--button-active-color);
 }
 
 .chooseRideImg {

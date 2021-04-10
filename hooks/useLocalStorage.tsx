@@ -2,15 +2,19 @@ import { useState } from "react";
 
 export default function useLocalStorage<T>(
   key: string,
-  initalValue: T
+  initialValue: T
 ): [T, (value: T) => void] {
   const readFromLocalStorage = (): T => {
     try {
+      if (typeof window === "undefined") {
+        return initialValue;
+      }
+
       const item = localStorage.getItem(key);
-      return item ? JSON.parse(item) : initalValue;
+      return item ? JSON.parse(item) : initialValue;
     } catch (error) {
       console.error(error);
-      return initalValue;
+      return initialValue;
     }
   };
 
