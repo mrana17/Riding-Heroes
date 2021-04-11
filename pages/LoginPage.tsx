@@ -7,14 +7,14 @@ import router from "next/router";
 export default function LoginPage() {
   return (
     <div className={styles.container}>
-      <main className={styles.main}>
+      <form className={styles.main}>
         <Logo src="/full-Logo.svg" />
         <div className={styles.inputFields}>
           <Input type="text" placeholder="Benutzername" />
           <Input type="password" placeholder="Passwort" />
         </div>
         <Button label="Login" onClick={() => router.push("/ProfilePage")} />
-      </main>
+      </form>
     </div>
   );
 }

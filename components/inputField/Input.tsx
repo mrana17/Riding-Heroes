@@ -5,8 +5,14 @@ export type InputProps = {
   type: string;
 };
 
-function Input({ placeholder }: InputProps) {
-  return <input className={styles.input} placeholder={placeholder}></input>;
+function Input({ placeholder, type }: InputProps) {
+  return (
+    <input
+      className={styles.input}
+      type={type}
+      placeholder={placeholder}
+    ></input>
+  );
 }
 
 export default Input;
