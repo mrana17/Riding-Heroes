@@ -7,7 +7,10 @@ export type TableProps = {
   tipTitle: string;
   sumTitle: string;
   id: number;
-  address: string;
+  street: string;
+  number: number;
+  plz: number;
+  city: string;
   sale: number;
   tip: number;
   sum: number;
@@ -15,7 +18,10 @@ export type TableProps = {
 
 function Table({
   id,
-  address,
+  street,
+  number,
+  plz,
+  city,
   sale,
   idTitle,
   addressTitle,
@@ -37,21 +43,9 @@ function Table({
         </tr>
         <tr>
           <td className={styles.table}>{id}</td>
-          <td className={styles.table}>{address}</td>
-          <td className={styles.table}>{sale}</td>
-          <td className={styles.table}>{tip}</td>
-          <td className={styles.table}>{sum}</td>
-        </tr>
-        <tr>
-          <td className={styles.table}>{id}</td>
-          <td className={styles.table}>{address}</td>
-          <td className={styles.table}>{sale}</td>
-          <td className={styles.table}>{tip}</td>
-          <td className={styles.table}>{sum}</td>
-        </tr>
-        <tr>
-          <td className={styles.table}>{id}</td>
-          <td className={styles.table}>{address}</td>
+          <td className={styles.table}>
+            {street} {number}, {plz} {city}
+          </td>
           <td className={styles.table}>{sale}</td>
           <td className={styles.table}>{tip}</td>
           <td className={styles.table}>{sum}</td>
