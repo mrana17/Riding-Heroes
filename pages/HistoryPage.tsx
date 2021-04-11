@@ -2,9 +2,18 @@ import HeaderButton from "../components/headerButton/headerButton";
 import SubHeader from "../components/subHeader/subHeader";
 import styles from "../styles/HistoryPage.module.css";
 import FooterButton from "../components/footerButton/footerButton";
-import OrderCard from "../components/orderCards/orderCards";
+import OrderCard, { OrderCardProps } from "../components/orderCards/orderCards";
+import { useEffect, useState } from "react";
 
 export default function HistoryPage() {
+  const [orders, setOrders] = useState<OrderCardProps[]>([]);
+
+  useEffect(() => {
+    fetch("/api/orders")
+      .then((data) => data.json())
+      .then((orders: OrderCardProps[]) => setOrders(orders));
+  }, []);
+
   return (
     <main className={styles.main}>
       <div className={styles.header}>
@@ -29,42 +38,22 @@ export default function HistoryPage() {
         />
       </div>
       <div className={styles.cardContainer}>
-        <OrderCard
-          imgSrc="/Card-Placeholder.png"
-          imgSrcStart="/Start.svg"
-          imgSrcEnd="/Target.svg"
-          name="Max"
-          surname="Mustermann"
-          startAddress="Mönckebergstrasse 7, 20099 Hamburg"
-          address="Ballindamm 9, 20099 Hamburg"
-        />
-        <OrderCard
-          imgSrc="/Card-Placeholder.png"
-          imgSrcStart="/Start.svg"
-          imgSrcEnd="/Target.svg"
-          name="Max"
-          surname="Mustermann"
-          startAddress="Mönckebergstrasse 7, 20099 Hamburg"
-          address="Ballindamm 9, 20099 Hamburg"
-        />
-        <OrderCard
-          imgSrc="/Card-Placeholder.png"
-          imgSrcStart="/Start.svg"
-          imgSrcEnd="/Target.svg"
-          name="Max"
-          surname="Mustermann"
-          startAddress="Mönckebergstrasse 7, 20099 Hamburg"
-          address="Ballindamm 9, 20099 Hamburg"
-        />
-        <OrderCard
-          imgSrc="/Card-Placeholder.png"
-          imgSrcStart="/Start.svg"
-          imgSrcEnd="/Target.svg"
-          name="Max"
-          surname="Mustermann"
-          startAddress="Mönckebergstrasse 7, 20099 Hamburg"
-          address="Ballindamm 9, 20099 Hamburg"
-        />
+        {orders.map((order: OrderCardProps) => (
+          <OrderCard
+            key={order.id}
+            id={order.id}
+            imgSrc="/Card-Placeholder.png"
+            imgSrcStart="/Start.svg"
+            imgSrcEnd="/Target.svg"
+            name={order.name}
+            Surname={order.Surname}
+            startAddress="Mönckebergstrasse 7, 20099 Hamburg"
+            street={order.street}
+            number={order.number}
+            plz={order.plz}
+            city={order.city}
+          />
+        ))}
       </div>
       <div className={styles.footer}>
         <FooterButton

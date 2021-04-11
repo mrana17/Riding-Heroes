@@ -1,23 +1,31 @@
 import styles from "./orderCards.module.css";
 
 export type OrderCardProps = {
+  id: number;
   imgSrc: string;
   imgSrcStart: string;
   imgSrcEnd: string;
   name: string;
-  surname: string;
+  Surname: string;
   startAddress: string;
-  address: string;
+  street: string;
+  number: number;
+  plz: number;
+  city: string;
 };
 
 function OrderCard({
+  id,
   imgSrc,
   imgSrcStart,
   imgSrcEnd,
   name,
-  surname,
+  Surname,
   startAddress,
-  address,
+  street,
+  number,
+  plz,
+  city,
   ...props
 }: OrderCardProps) {
   return (
@@ -25,7 +33,7 @@ function OrderCard({
       <div className={styles.orderCardContainer}>
         <img src={imgSrc} className={styles.orderCardImg} />
         <p className={styles.orderCardName}>
-          {name} {surname}
+          {name} {Surname}
         </p>
         <p className={styles.orderCardStartAddress}>
           <img src={imgSrcStart} className={styles.orderCardStart} />
@@ -33,7 +41,9 @@ function OrderCard({
         </p>
         <p className={styles.orderCardAddress}>
           <img src={imgSrcEnd} className={styles.orderCardEnd} />
-          {address}
+          {street} {number}
+          {", "}
+          {plz} {city}
         </p>
       </div>
     </div>
