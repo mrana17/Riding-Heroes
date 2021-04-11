@@ -2,9 +2,17 @@ import HeaderButton from "../components/headerButton/headerButton";
 import SubHeader from "../components/subHeader/subHeader";
 import styles from "../styles/WalletPage.module.css";
 import FooterButton from "../components/footerButton/footerButton";
-import Table from "../components/table/table";
+import Table, { TableProps } from "../components/table/table";
+import { useEffect, useState } from "react";
 
 export default function WalletPage() {
+  const [orders, setOrders] = useState<TableProps[]>([]);
+
+  useEffect(() => {
+    fetch("/api/orders")
+      .then((data) => data.json())
+      .then((orders: TableProps[]) => setOrders(orders));
+  }, []);
   return (
     <main className={styles.main}>
       <div className={styles.header}>
@@ -29,18 +37,24 @@ export default function WalletPage() {
         />
       </div>
       <div className={styles.tableContainer}>
-        <Table
-          idTitle="ID"
-          addressTitle="Address"
-          saleTitle="Sale"
-          tipTitle="Trinkgeld"
-          sumTitle="Summe"
-          id={1}
-          address="Ballindamm 9, 20099 Hamburg"
-          sale={16.7}
-          tip={2.3}
-          sum={76.4}
-        />
+        {orders.map((order: TableProps) => (
+          <Table
+            key={order.id}
+            idTitle="ID"
+            addressTitle="Address"
+            saleTitle="Sale"
+            tipTitle="Trinkgeld"
+            sumTitle="Summe"
+            id={order.id}
+            street={order.street}
+            number={order.number}
+            plz={order.plz}
+            city={order.city}
+            sale={order.sale}
+            tip={2.3}
+            sum={76.4}
+          />
+        ))}
       </div>
       <div className={styles.footer}>
         <FooterButton
