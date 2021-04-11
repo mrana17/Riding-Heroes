@@ -14,7 +14,9 @@ BigTable.args = {
   idTitle: "ID",
   addressTitle: "Address",
   saleTitle: "Sale",
+  tipTitle: "Trinkgeld",
   id: "1",
   address: "Ballindamm 9, 20099 Hamburg",
   sale: "16,70€",
+  tip: "2,30€",
 };
