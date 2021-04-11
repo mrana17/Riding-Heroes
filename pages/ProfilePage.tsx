@@ -5,8 +5,15 @@ import styles from "../styles/ProfilePage.module.css";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import FooterButton from "../components/footerButton/footerButton";
+import { useState } from "react";
 
 export default function ProfilePage() {
+  const [ride, setRide] = useState("Auto");
+
+  const updateRide = (ride: string) => {
+    setRide(ride);
+  };
+
   return (
     <main className={styles.main}>
       <div className={styles.header}>
@@ -34,26 +41,26 @@ export default function ProfilePage() {
         <ChooseRideButton
           imgSrc="/bike.svg"
           label="Fahrrad"
-          onClick={() => alert("You are riding a bike")}
-          className={styles.chooseRideButton}
+          isActive={ride === "Fahrrad"}
+          onSelectRide={updateRide}
         />
         <ChooseRideButton
           imgSrc="/car.svg"
           label="Auto"
-          onClick={() => alert("You are riding a car")}
-          className={styles.chooseRideButton}
+          isActive={ride === "Auto"}
+          onSelectRide={updateRide}
         />
         <ChooseRideButton
           imgSrc="/scooter.svg"
           label="Scooter"
-          onClick={() => alert("You are riding a scooter")}
-          className={styles.chooseRideButton}
+          isActive={ride === "Scooter"}
+          onSelectRide={updateRide}
         />
         <ChooseRideButton
           imgSrc="/Roller.svg"
           label="Roller"
-          onClick={() => alert("You are riding a roller")}
-          className={styles.chooseRideButton}
+          isActive={ride === "Roller"}
+          onSelectRide={updateRide}
         />
       </div>
       <div className={styles.calendar}>
