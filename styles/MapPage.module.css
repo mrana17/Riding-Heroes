@@ -1,0 +1,14 @@
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  z-index: 1000;
+  height: 10vh;
+  width: 100vw;
+  background-color: var(--pattern-color);
+  border-radius: 1.5rem;
+  box-shadow: var(--component-shadow);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-start: 36;
+  place-items: center;
+}
