@@ -1,5 +1,5 @@
-import { useState } from "react";
-import ReactMapGL from "react-map-gl";
+import { useEffect, useState } from "react";
+import ReactMapGL, { Marker } from "react-map-gl";
 import FooterButton from "../components/footerButton/footerButton";
 import styles from "../styles/MapPage.module.css";
 
@@ -11,6 +11,20 @@ export default function MapPage() {
     longitude: 10.011979,
     zoom: 10,
   });
+  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/mcdonalds.json?access_token=${process.env.NEXT_PUBLIC_MAPBOX_KEY}&bbox=9.808210,53.558600,10.112420,53.653780&limit=10`;
+  const [locations, setLocations] = useState([]);
+  useEffect(() => {
+    const fetchLocations = async () => {
+      await fetch(url)
+        .then((response) => response.text())
+        .then((res) => JSON.parse(res))
+        .then((json) => {
+          setLocations(json.features);
+        })
+        .catch((err) => console.log({ err }));
+    };
+    fetchLocations();
+  }, []);
   return (
     <>
       <ReactMapGL
@@ -18,7 +32,22 @@ export default function MapPage() {
         mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_KEY}
         {...viewport}
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
-      ></ReactMapGL>
+      >
+        {locations.map((location) => (
+          <div key={location.id}>
+            <Marker
+              latitude={location.center[1]}
+              longitude={location.center[0]}
+              offsetLeft={-20}
+              offsetTop={-10}
+            >
+              <span role="img" aria-label="push-pin">
+                📌
+              </span>
+            </Marker>
+          </div>
+        ))}
+      </ReactMapGL>
       <div className={styles.footer}>
         <FooterButton
           label="Profile"
