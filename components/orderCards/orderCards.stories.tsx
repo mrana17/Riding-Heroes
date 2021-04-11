@@ -17,5 +17,8 @@ orderCard.args = {
   name: "Max",
   surname: "Mustermann",
   startAddress: "Mönckebergstrasse 7, 20099 Hamburg",
-  address: "Ballindamm 9, 20099 Hamburg",
+  street: "Ballindamm",
+  number: 9,
+  plz: 20099,
+  city: "Hamburg",
 };
